@@ -1,0 +1,200 @@
+/*-----------------------*/
+/*   Dice box in middle  */
+/*-----------------------*/
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    background-image: url("DiceImages/Beach-tree.jpg");
+}
+
+.BodyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.DiceBox {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width: 100%;
+    max-height: 100%;
+    background: linear-gradient(#e92e3d, #ff6e6a);
+    box-shadow: 0 15px 25px rgba(50,50,50,0.15);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Poppins",sans-serif;
+}
+
+.DiceBox p {
+    color: rgb(245, 245, 245);
+    font-size: 1rem;
+    margin: 1.875rem;
+}
+
+.Dices {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    gap: 3.125rem;
+    object-fit: scale-down;
+}
+
+#Dice01, #Dice02 {
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(scale-down);
+}
+
+button{
+    background-color: #e92e3d;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 1rem 0;
+    max-width: 100%;
+    margin-bottom: 50px;
+    letter-spacing: 0.063rem;
+    border-radius: 0.313rem;
+    cursor: pointer;
+    width: 6.875rem;
+}
+
+button:hover {
+    color: #ffffff;
+    background-color: #be1120;
+}
+
+.shake{ animation: shake 0.5s infinite; }
+
+@keyframes shake{
+    0% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+    100% { transform: rotate(15deg); }} 
+
+
+/*-----------------------*/
+/*  Hyperlinks/HeadLine  */
+/*-----------------------*/
+
+
+.Rules{
+    text-align: center;
+    background: linear-gradient(#cc1625, #ff6e6a);
+    box-shadow: 0 15px 25px rgba(50,50,50,0.15);
+    color: rgb(245, 245, 245);
+    border-radius: 1rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+
+.HeadLine {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.HeadLine-Text01 {    
+    margin-left: 4rem;
+    font-size: 2.5rem;
+    font-family: 'Courier New', Courier,;
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+    
+}
+
+.HyperlinkandStat-Box {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    display: grid;
+    grid-template-rows: 0.6fr 0.5fr 1fr ;
+}
+
+.StatsBox {
+    grid-row-start: 3;
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(#cc1625, #ff6e6a);
+    box-shadow: 0 15px 25px rgba(50,50,50,0.15);
+    border-radius: 0.5rem;  
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+.Money,
+.TimesWon,
+.TimesLost {
+    margin-top: 1.5rem;
+    color: rgb(245, 245, 245);
+}
+
+#Hyperlinks {
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.Blackjack, .Roulette, .Slot, .Dice {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    background: linear-gradient(#cc1625, #ff6e6a);
+    border-bottom-right-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
+    font-size: 120%;
+    text-align: center;
+}
+
+.Dice{
+    margin-right: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    background: linear-gradient(#a10613, #ca332e);
+}
+
+
+
+@keyframes glow {
+    from {
+     color: #ffffff;
+   text-shadow: 
+   0 0 10px #c52121, 
+   0 0 20px #c52121, 
+   0 0 30px #c52121, 
+   0 0 40px #c52121, 
+   0 0 50px #c52121, 
+   0 0 60px #c52121, 
+   0 0 70px #c52121, 
+   0 0 90px #c52121;
+ }
+ to {
+    color: #c52121;
+   text-shadow: 
+   0 0 20px #c52121, 
+   0 0 30px #c52121, 
+   0 0 40px #c52121, 
+   0 0 50px #c52121, 
+   0 0 60px #c52121, 
+   0 0 70px #c52121, 
+   0 0 80px #c52121, 
+   0 1 90px #c52121;
+ }
+}

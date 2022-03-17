@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #191919;
+}
+
+.BodyGrid {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    height: 100%;
+}
+
+nav {
+    grid-column-start: 3;  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+
+.Blackjack, .Roulette, .Slot, .Dice {
+    opacity: 0;
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem;
+    color: #191919;
+    background-color: rgb(240, 240, 240);
+    border-bottom-right-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+    font-size: 1.25rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in forwards;   
+    animation-delay: 2s;
+}
+
+.HeadLine {
+    grid-column-start: 1;  
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-top: 10%;
+}
+
+.HeadLine-Text01 {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 5.625rem;
+    font-family: 'Courier New', Courier,;
+    color: rgb(240, 240, 240);
+    animation: fade-in-move-down 2s;
+}
+
+.HeadLine-Text02 {
+    margin-top: 0;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    font-size: 1.875rem;
+    font-family: 'Courier New', Courier,;
+    color: rgb(240, 240, 240);
+    animation: fade-in-move-down 2s;
+}
+
+.Author {
+    margin: 1.25rem;
+    position: fixed;
+    bottom: 0;
+    color: rgba(240, 240, 240, 0.5);
+}
+
+@keyframes fade-in-move-down {
+    0% {opacity: 0; transform: translateY(-3rem);  }
+    100% {opacity: 1; transform: translateY(0);}}
+
+@keyframes fadeIn { to{ opacity: 1; } }
