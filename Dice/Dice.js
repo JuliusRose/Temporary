@@ -32,14 +32,14 @@ function roll(){
         document.querySelector("#Dice02").setAttribute("src", images[dieTwoValue]);
         document.querySelector("#DiceTotal").innerHTML = "Your roll is " + ( (dieOneValue +1) + (dieTwoValue + 1) );
 
-          if((dieOneValue +1) + (dieTwoValue + 1) >= 6) {
-              Money *= 4;
+          if((dieOneValue +1) + (dieTwoValue + 1) > 6) {
+              Money *= 2;
               TimesWon += 1;
               MoneyText.innerHTML = `Money: ${Money} $`; 
               TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
 
           }
-          else if ((dieOneValue +1) + (dieTwoValue + 1) <= 5) {
+          else if ((dieOneValue +1) + (dieTwoValue + 1) <= 6) {
               Money *= 0.5;
               TimesLost += 1;
               MoneyText.innerHTML = `Money: ${Money} $`; 
