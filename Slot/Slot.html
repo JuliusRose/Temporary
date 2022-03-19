@@ -9,6 +9,48 @@
     <script defer src="Slot.js"></script>
 </head>
 <body>
+    <div class="BodyGrid">
 
+        <div class="HeadLine">
+            <nav id="Intro">
+                <a href="/IntroScreen/Intro.html">
+                    <h1 class="HeadLine-Text01">Basic Gambling Site</h1>
+                </a>
+            </nav>
+        </div>
+
+        <nav id="Hyperlinks">
+            <a class="Blackjack" href="/Blackjack/Blackjack.html">Blackjack</a>
+            <a class="Roulette" href="/Roulette/Roulette.html">Roulette</a>
+            <a class="Slot" href="/Slot/Slot.html">Slot</a>           
+            <a class="Dice" href="/Dice/Dice.html">Dice</a>
+        </nav>
+        
+        <div class="WinLoseMon">
+        <div class="StatsBox">
+            <div class="Money">Money: 100 $</div>
+            <div class="TimesWon">TimesWon: 0</div>
+            <div class="TimesLost">TimesLost: 0</div>
+        </div>
+       </div>
+
+     <div class="Rules">
+         <h1>Rules:</h1>
+         <p>If you get 3 of a kind you win 1000 times as much money.</p>
+         <p>If you get 2 of a kind you semi-win and get 10 times as much money.</p>
+         <p>If you lose we take away 10 times your money.</p>
+     </div>
+
+        <div class="SlotBox">
+            <div class="Slots">
+                <img class="shake"  id="Slot01">
+                <img class="shake" id="Slot02">
+                <img class="shake" id="Slot03">
+            </div>
+            <p id="SlotTotal"></p>
+            <button onclick="roll()">ROLL THE DICE</button>
+        </div>
+        
+    </div>
 </body>
 </html>
