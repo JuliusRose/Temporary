@@ -5,8 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="Roulette.css">
+    <script defer src="Roulette.js"></script>
 </head>
 <body>
-    
+    <div class="BodyGrid">
+
+        <div class="HeadLine">
+            <nav id="Intro">
+                <a href="/IntroScreen/Intro.html">
+                    <h1 class="HeadLine-Text01">Basic Gambling Site</h1>
+                </a>
+            </nav>
+        </div>
+
+        <nav id="Hyperlinks">
+            <a class="Blackjack" href="/Blackjack/Blackjack.html">Blackjack</a>
+            <a class="Roulette" href="/Roulette/Roulette.html">Roulette</a>
+            <a class="Slot" href="/Slot/Slot.html">Slot</a>           
+            <a class="Dice" href="/Dice/Dice.html">Dice</a>
+        </nav>
+        
+        <div class="WinLoseMon">
+        <div class="StatsBox">
+            <div class="Money">Money: 100 $</div>
+            <div class="TimesWon">TimesWon: 0</div>
+            <div class="TimesLost">TimesLost: 0</div>
+        </div>
+       </div>
+
+     <div class="Rules">
+         <h1>Rules:</h1>
+         <p>If you get a even number you get 2 times your money.</p>
+         <p>If you get a odd number you get taken away half of your money.</p>
+     </div>
+
+        <div class="WheelBox">
+            <div class="Wheel">
+                <img class="shake"  id="Wheel01" src="RouletteImages/wheel.png">
+            </div>
+            <p id="WheelTotal"></p>
+            <button onclick="spin()">Click to spin!</button>
+        </div>
+        
+    </div>
 </body>
 </html>
