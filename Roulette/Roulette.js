@@ -1,4 +1,4 @@
-let Money = 100;
+let Money = localStorage.getItem("Money");
 let TimesWon = 0;
 let TimesLost = 0; 
 
@@ -25,12 +25,14 @@ function spin(){
             TimesWon += 1;
             MoneyText.innerHTML = `Money: ${Money} $`; 
             TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
+            localStorage.setItem("Money", Money);
         }
         else {
             Money *= 0.5;
             TimesLost += 1;
             MoneyText.innerHTML = `Money: ${Money} $`; 
             TimesLostText.innerHTML = `TimesLost: ${TimesLost}`
+            localStorage.setItem("Money", Money);
         }
     },
     3000

@@ -1,4 +1,4 @@
-let Money = 100;
+let Money = localStorage.getItem("Money");
 let TimesWon = 0;
 let TimesLost = 0; 
 
@@ -38,6 +38,7 @@ function roll(){
               TimesWon += 1;
               MoneyText.innerHTML = `Money: ${Money} $`; 
               TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
+              localStorage.setItem("Money", Money);
           }
           else if((dieOneValue + 1) == (dieTwoValue + 1)) {
             document.querySelector("#SlotTotal").innerHTML = "Semi-Win";
@@ -45,6 +46,7 @@ function roll(){
             TimesWon += 1;
             MoneyText.innerHTML = `Money: ${Money} $`; 
             TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
+            localStorage.setItem("Money", Money);
         }
         else if((dieTwoValue + 1) == (dieThreeValue + 1)) {
             document.querySelector("#SlotTotal").innerHTML = "Semi-Win";
@@ -52,6 +54,7 @@ function roll(){
             TimesWon += 1;
             MoneyText.innerHTML = `Money: ${Money} $`; 
             TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
+            localStorage.setItem("Money", Money);
         }
         else if((dieOneValue + 1) == (dieThreeValue + 1)) {
             document.querySelector("#SlotTotal").innerHTML = "Semi-Win";
@@ -59,6 +62,7 @@ function roll(){
             TimesWon += 1;
             MoneyText.innerHTML = `Money: ${Money} $`; 
             TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
+            localStorage.setItem("Money", Money);
         }
           else {
               document.querySelector("#SlotTotal").innerHTML = "Lose";
@@ -66,6 +70,7 @@ function roll(){
               TimesLost += 1;
               MoneyText.innerHTML = `Money: ${Money} $`; 
               TimesLostText.innerHTML = `TimesLost: ${TimesLost}` 
+              localStorage.setItem("Money", Money);
           }
     },
     1500

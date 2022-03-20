@@ -4,7 +4,7 @@ let values = ['Ace', 'King', 'Queen', 'Jack',
   'Five', 'Four', 'Three', 'Two', 'One'
 ];
 
-let Money = 100;
+let Money = localStorage.getItem("Money");
 let TimesWon = 0;
 let TimesLost = 0; 
 
@@ -177,6 +177,7 @@ function showStatus()
       TimesWon += 1;
       MoneyText.innerHTML = `Money: ${Money} $`; 
       TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
+      localStorage.setItem("Money", Money);
     }
     else{
       textArea.innerText += "DEALER WINS";
@@ -184,6 +185,7 @@ function showStatus()
       TimesLost += 1;
       MoneyText.innerHTML = `Money: ${Money} $`; 
       TimesLostText.innerHTML = `TimesLost: ${TimesLost}`
+      localStorage.setItem("Money", Money);
     }
     newGameButton.style.display = 'inline';
     hitButton.style.display = 'none';

@@ -1,6 +1,8 @@
-let Money = 100;
+let Money = localStorage.getItem("Money");
 let TimesWon = 0;
 let TimesLost = 0; 
+
+
 
 let MoneyText = document.querySelector(".Money");
 let TimesWonText = document.querySelector(".TimesWon");
@@ -37,6 +39,7 @@ function roll(){
               TimesWon += 1;
               MoneyText.innerHTML = `Money: ${Money} $`; 
               TimesWonText.innerHTML = `TimesWon: ${TimesWon}`
+              localStorage.setItem("Money", Money);
 
           }
           else if ((dieOneValue +1) + (dieTwoValue + 1) <= 6) {
@@ -44,6 +47,7 @@ function roll(){
               TimesLost += 1;
               MoneyText.innerHTML = `Money: ${Money} $`; 
               TimesLostText.innerHTML = `TimesLost: ${TimesLost}`
+              localStorage.setItem("Money", Money);
           }
     },
     1000
